@@ -94,4 +94,4 @@ if st.sidebar.button('Clear Chat History'):
     st.session_state.messages = [
         {"role": "assistant", "content": "Hello! I'm Lakshya, your Mental Health Assistant. How can I support you today?"}
     ]
-    st.experimental_rerun()
+    st.rerun()
