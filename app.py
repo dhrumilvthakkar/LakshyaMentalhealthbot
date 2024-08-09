@@ -22,8 +22,6 @@ def load_model():
     # Create peft model using base_model and finetuned adapter
     config = PeftConfig.from_pretrained(adapter)
     model = AutoModelForCausalLM.from_pretrained(config.base_model_name_or_path,
-                                                 load_in_4bit=True,
-                                                 device_map='auto',
                                                  torch_dtype='auto')
     model = PeftModel.from_pretrained(model, adapter)
 
